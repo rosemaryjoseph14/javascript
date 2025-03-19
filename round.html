@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{width:25px;
+             height:25px;
+             border:1px solid red;
+             border-radius: 30px;
+             position: absolute;
+             }
+        
+         
+    </style>
+</head>
+<body>
+
+    <script>
+        
+              var d=["#000000","#cccc00","#66664T","#rr994D"]
+              var colotindex=0
+    document.addEventListener("mousemove",()=>{
+    var box=document.createElement("div")
+       box.setAttribute("id","box")
+       document.body.appendChild(box)
+       box.style.left=event.clientX +'px'
+       box.style.top=event.clientY  +'px'
+
+       box.style.border = "1px solid " + d[colotindex]; 
+       colotindex=(colotindex+1)%d.length;
+
+       setTimeout(()=>{box.remove()},300)
+       
+    })
+    </script>
+</body>
+</html>

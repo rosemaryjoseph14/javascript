@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{width:500px;
+         height:350px;
+         background-color:blueviolet;
+         margin:auto;}
+
+</style>
+<body>
+    <div class="box"></div>
+    <button>Button</button>
+
+<script>
+var x=document.createElement("img");
+x.setAttribute("src","img/1.jpg")
+var y=document.querySelector(".box")
+y.appendChild(x)
+var t=1
+
+document.addEventListener("mousemove",()=>{
+   var h= event.clientX
+   var j=event.clientY
+    t++
+    x.src="img/"+t+".jpg"
+    console.log(h,j)
+
+    if(t==36){
+        t=1
+
+    }
+})
+</script>
+    
+</body>
+</html>

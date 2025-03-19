@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .ima {
+            display:flex;
+            width: 25%;
+
+         }
+    </style>
+</head>
+<body>
+
+    <button onclick="myfn()">click</button>
+    <div id="dd">
+    <div class="ima"></div>
+    </div> 
+    <script>
+   function myfn(){
+     console.log("click");
+
+var r=fetch("https://jsonplaceholder.typicode.com/photos");
+ var s=r.then((Response)=>Response.json());
+ s.then((Response)=>Response.map((value,index)=>{
+
+    var img=document.createElement("img");
+    img.setAttribute("id","ggg"+index)
+    img.setAttribute("width","100%"+index)
+    document.querySelector(".ima").appendChild(img)
+document.getElementById("ggg"+index).src=value.url
+     
+   var p=document.createElement("p");
+   p.setAttribute("id","fff"+index)
+   p.setAttribute("dd",+index)
+   document.querySelector(".ima").appendChild(p)
+document.getElementById("fff"+index).innerHTML=value.title
+
+ }));
+
+   }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainbox{
+        width:60%;
+        height:100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:10px;
+        justify-content: center;
+        background-color:black;
+        margin: auto;
+    }
+     .subbox{
+        width:23%;
+        height: 45%;
+        
+    }
+    .subbox1{
+        width:23%;
+        height: 45%;
+       
+    }
+    .subbox2{
+        width:23%;
+        height: 45%;
+    }
+    .subbox3{
+        width:23%;
+        height: 45%;
+    }
+    .subbox4{
+        width:23%;
+        height: 45%;
+    }
+    .subbox5{
+        width:23%;
+        height: 45%;
+       
+    } 
+    .img{
+        width: 100%;
+        height:80%;
+    }
+</style>
+<body>
+    <div class="mainbox">
+        <div class="subbox">
+            <img src="images/Dice1.png" class="img">
+        </div>
+        <div class="subbox1">
+            <img src="images/Dice2.png" class="img">
+        </div>
+        <div class="subbox2">
+            <img src="images/Dice3.png" class="img">
+        </div>
+        <div class="subbox3">
+            <img src="images/Dice4.png" class="img">
+        </div>
+        <div class="subbox4">
+            <img src="images/Dice5.png" class="img">
+        </div>
+        <div class="subbox5">
+            <img src="images/Dice6.png" class="img">
+        </div>
+    </div>
+    <script>
+
+var x=document.querySelector(".mainbox")
+     x.addEventListener("click",()=>{
+
+        document.querySelector(".mainbox").style.filter="blur(3px)"
+     })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="type">
+    <button onclick="object()">click</button>
+
+<script>
+
+    var d={name:"rosemary",
+           phone:{}
+    }
+function object(){
+    var y=document.querySelector(".type").value
+    var x=Object.keys(d.phone).length;
+    d.phone["phone"+x]=y
+
+    console.log(d)
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    .mainbox{
+        width: 40%;
+        height: 260px;
+        background-color:#fbe62d;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .textbox{
+        width: 15%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+    }
+    .texter{
+        width: 15%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+    }
+ </style>
+<!-- Number("1* 9/5 +32") -->
+</head>
+<body>
+    <div class="mainbox">
+         <label>°C</label>
+        <input type="text" class="textbox" onkeyup="myfd()" value="">
+
+        <label>°F</label>
+        <input type="text" class="texter" >
+    </div>
+    <script>
+
+      function myfd(){ 
+       var x=document.querySelector(".textbox").value;
+       document.querySelector(".texter").value=x
+       var fahrenheit = (x* 9/5) + 32;
+          document.querySelector(".texter").value= fahrenheit
+         
+      }
+
+    </script>
+</body>
+
+</html>
